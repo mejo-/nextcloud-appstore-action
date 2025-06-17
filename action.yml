@@ -11,10 +11,12 @@ inputs:
     default: ''
 
 outputs:
+  release:
+    description: Metadata of the latest app release compatible with specified Nextcloud version
   version:
-    description: Latest version of the Nextcloud app
+    description: Version of the release
   download:
-    description: Download URL for the version
+    description: Download URL of the release tarball
 
 runs:
   using: node20

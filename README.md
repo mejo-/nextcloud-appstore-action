@@ -10,17 +10,21 @@ Get metadata of the latest version of an app from Nextcloud app store.
 
 ### `server-major`
 
-**Optional** Nextcloud server major version number (e.g. `31`)
+**Optional** Nextcloud server major version number. (e.g. `31`)
 
 ## Outputs
 
+### `release`
+
+Metadata of the latest app release compatible with specified Nextcloud version
+
 ### `version`
 
-Latest version of the Nextcloud app
+Version of the release
 
 ### `download`
 
-Download URL for the version
+Download URL of the release
 
 ## Usage
 

@@ -1,0 +1,26 @@
+name: Test the action
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  test_action:
+    runs-on: ubuntu-latest
+    name: A job to test the action
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Execute action
+      id: run
+      uses: ./
+      with:
+        appid: collectives
+        server_major: 30
+
+    - name: Get the result
+      run: |
+        echo -e "Version: ${{ steps.run.outputs.version }}"
+        echo -e "Download: ${{ steps.run.outputs.download }}"

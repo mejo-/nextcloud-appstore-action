@@ -56,7 +56,7 @@ tarball:
 
 - name: Get collectives app from app store
   id: collectives-app
-  uses: mejo-/nextcloud-appstore-action@36a7bb3d7f13911726f36a3556023cd93f429221 # v1.0.0
+  uses: mejo-/nextcloud-appstore-action@ed4868a4ed5f6c236a49360f059d208af259f868 # v1.0.0
   with:
     app-id: collectives
     server-major: 31

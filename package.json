@@ -1,0 +1,27 @@
+{
+  "name": "nextcloud-appstore-action",
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "scripts": {
+    "build": "rollup --config rollup.config.ts --configPlugin @rollup/plugin-typescript"
+  },
+  "keywords": [],
+  "type": "module",
+  "author": "",
+  "license": "MIT",
+  "description": "Get metadata of the latest version of an app from Nextcloud app store",
+  "dependencies": {
+    "@actions/core": "^1.11.1",
+    "semver": "^7.7.2"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^28.0.5",
+    "@rollup/plugin-node-resolve": "^16.0.1",
+    "@rollup/plugin-typescript": "^12.1.2",
+    "@types/node": "^24.0.3",
+    "@types/semver": "^7.7.0",
+    "rollup": "^4.43.0",
+    "tslib": "^2.8.1",
+    "typescript": "^5.8.3"
+  }
+}

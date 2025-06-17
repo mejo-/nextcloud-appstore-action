@@ -1,0 +1,21 @@
+name: Nextcloud app store
+description: Get metadata of the latest version of an app from Nextcloud app store
+
+inputs:
+  app-id:
+    description: Nextcloud app id
+    required: true
+  server-major:
+    description: Nextcloud server major version number (optional)
+    required: false
+    default: ''
+
+outputs:
+  version:
+    description: Latest version of the Nextcloud app
+  download:
+    description: Download URL for the version
+
+runs:
+  using: node20
+  main: dist/index.js

@@ -56,10 +56,10 @@ try {
 		.filter((r: Release) => serverMajor === '' || semver.satisfies(semver.coerce(serverMajor) ?? '', r.rawPlatformVersionSpec));
 	let latestRelease = filteredReleases.reduce((r1: Release, r2: Release) => semver.gt(r2.version, r1.version) ? r2 : r1);
 
-    core.info(`version: ${latestReleast.version}`);
-    core.info(`download: ${latestReleast.download}`);
-	core.setOutput('release', lastestRelease);
-	core.setOutput('version', lastestRelease.version);
+    core.info(`version: ${latestRelease.version}`);
+    core.info(`download: ${latestRelease.download}`);
+	core.setOutput('release', latestRelease);
+	core.setOutput('version', latestRelease.version);
 	core.setOutput('download', latestRelease.download);
 } catch (error: any) {
 	core.setFailed(error.message);

@@ -29991,9 +29991,12 @@ try {
         .filter((r) => !!semver.valid(r.version))
         // Consider only releases compatible with major server version
         .filter((r) => serverMajor === '' || semver.satisfies(semver.coerce(serverMajor) ?? '', r.rawPlatformVersionSpec));
-    let newestRelease = filteredReleases.reduce((r1, r2) => semver.gt(r2.version, r1.version) ? r2 : r1);
-    coreExports.setOutput('version', newestRelease.version);
-    coreExports.setOutput('download', newestRelease.download);
+    let latestRelease = filteredReleases.reduce((r1, r2) => semver.gt(r2.version, r1.version) ? r2 : r1);
+    coreExports.info(`version: ${latestRelease.version}`);
+    coreExports.info(`download: ${latestRelease.download}`);
+    coreExports.setOutput('release', latestRelease);
+    coreExports.setOutput('version', latestRelease.version);
+    coreExports.setOutput('download', latestRelease.download);
 }
 catch (error) {
     coreExports.setFailed(error.message);

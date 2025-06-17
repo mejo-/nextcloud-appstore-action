@@ -39,8 +39,8 @@ async function getAppStore(): Promise<Array<any>> {
 }
 
 try {
-	const appId = core.getInput('app-id');
-	const serverMajor = core.getInput('server-major');
+	const appId = core.getInput('appid');
+	const serverMajor = core.getInput('server_major');
 	core.info(`appId: ${appId}`);
 	core.info(`serverMajor: ${serverMajor}`);
 

@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "main": "src/index.js",
   "scripts": {
-    "build": "rollup --config rollup.config.ts --configPlugin @rollup/plugin-typescript"
+    "build": "rollup --config rollup.config.ts --configPlugin @rollup/plugin-typescript",
+    "test": "INPUT_APPID='collectives' INPUT_SERVER_MAJOR='30' nodejs dist/index.js"
   },
   "keywords": [],
   "type": "module",

@@ -29978,8 +29978,8 @@ async function getAppStore() {
     return JSON.parse(await readFile(appsFile, 'utf8'));
 }
 try {
-    const appId = coreExports.getInput('app-id');
-    const serverMajor = coreExports.getInput('server-major');
+    const appId = coreExports.getInput('appid');
+    const serverMajor = coreExports.getInput('server_major');
     coreExports.info(`appId: ${appId}`);
     coreExports.info(`serverMajor: ${serverMajor}`);
     const appStore = await getAppStore();

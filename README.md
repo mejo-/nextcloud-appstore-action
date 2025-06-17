@@ -4,11 +4,11 @@ Get metadata of the latest version of an app from Nextcloud app store.
 
 ## Inputs
 
-### `app-id`
+### `appid`
 
 **Required** Nextcloud app ID.
 
-### `server-major`
+### `server_major`
 
 **Optional** Nextcloud server major version number. (e.g. `31`)
 
@@ -58,8 +58,8 @@ tarball:
   id: collectives-app
   uses: mejo-/nextcloud-appstore-action@ed4868a4ed5f6c236a49360f059d208af259f868 # v1.0.0
   with:
-    app-id: collectives
-    server-major: 31
+    appid: collectives
+    server_major: 31
 
 - name: Fetch collectives release tarball
   run: curl -fL -o '${{ runner.temp }}/collectives.tar.gz' '${{ steps.collectives-app.outputs.download }}'

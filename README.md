@@ -1,5 +1,7 @@
 # Nextcloud app store metadata action
 
+**⚠️  You probably want to use [appstore-action](https://github.com/nextcloud/appstore-action) instead.**
+
 Get metadata of the latest version of an app from Nextcloud app store.
 
 ## Inputs
@@ -27,6 +29,10 @@ Version of the release
 Download URL of the release
 
 ## Usage
+
+**⚠️  You probably want to use [appstore-action](https://github.com/nextcloud/appstore-action) instead.**
+
+`appstore-actions` implements the cache and optional downloading that is described below.
 
 The action looks for a local file `apps.json` and uses it if available. It only
 fetches the file from the Nextcloud app store if it's not available locally.

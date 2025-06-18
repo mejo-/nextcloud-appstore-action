@@ -1,4 +1,4 @@
-name: Nextcloud app store
+name: Nextcloud appstore metadata
 description: Get metadata of the latest version of an app from Nextcloud app store
 
 inputs:
